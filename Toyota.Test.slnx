@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="Directory.Build.props" />
+    <File Path="nuget.config" />
+    <File Path="readme.txt" />
+    <File Path="notes.txt" />
+  </Folder>
+  <Project Path="Toyota.Test/Toyota.Test.csproj" />
+  <Project Path="Toyota.Test.Tests/Toyota.Test.Tests.csproj" />
+</Solution>

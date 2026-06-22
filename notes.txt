@@ -1,0 +1,22 @@
+TMMC Programming Assignment - Notes on problems tackled
+=======================================================
+
+1. JPEG is lossy, so there is no "pure black/white".
+   MS Paint draws in pure black (0,0,0) on pure white (255,255,255), but after
+   JPEG compression the sharp line edges become bands of grey, and even "flat"
+   areas drift a few values away from 0/255. Testing a pixel for exact black
+   would be unreliable.
+   -> Solved by classifying a pixel as black using a perceived-brightness
+      threshold rather than an exact colour match.
+
+2. Choosing which pixels to inspect.   
+   The spec only guarantees presence in both halves + continuity, which simply
+   means the line crosses the boundary between the halves: the MIDDLE row.
+   -> Solved by scanning the single middle row (Height/2). It is the one row
+      every valid line is guaranteed to cross, needs no tunable parameters,
+      and is the most robust single choice.
+
+
+Possible future improvements (not required here):
+- GetPixel is convenient but slow; LockBits would be faster for large images.
+

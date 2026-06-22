@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- Windows-flavoured TFM: the tests also use System.Drawing to generate
+         synthetic fixtures (white image, thin lines, ...). -->
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Toyota.Test\Toyota.Test.csproj" />
+  </ItemGroup>
+
+  <!-- The four reference images shipped with the assignment are the test
+       oracle. Copy them next to the test assembly so tests can load them. -->
+  <ItemGroup>
+	  <Content Include="..\TestDocs\img_*.jpg" Link="TestImages\%(Filename)%(Extension)">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

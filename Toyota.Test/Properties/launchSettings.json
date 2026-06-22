@@ -1,0 +1,32 @@
+{
+  "profiles": {
+    "img_1": {
+      "commandName": "Project",
+      "workingDirectory": "..",
+      "commandLineArgs": "TestDocs/img_1.jpg"
+    },
+    "img_2": {
+      "commandName": "Project",
+      "workingDirectory": "..",
+      "commandLineArgs": "TestDocs/img_2.jpg"
+    },
+    "img_3": {
+      "commandName": "Project",
+      "workingDirectory": "..",
+      "commandLineArgs": "TestDocs/img_3.jpg"
+    },
+    "img_4": {
+      "commandName": "Project",
+      "workingDirectory": "..",
+      "commandLineArgs": "TestDocs/img_4.jpg"
+    },
+    "no args (usage message)": {
+      "commandName": "Project"
+    },
+    "custom": {
+      "commandName": "Project",
+      "workingDirectory": "..",
+      "commandLineArgs": "TestDocs/img_1.jpg"
+    }
+  }
+}
